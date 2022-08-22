@@ -1,0 +1,14 @@
+Package: mt5R
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.1
+Authors@R: 
+    person("Lucas", "Monteiro", , "lucas.ma8338@gmail.com", role = c("aut", "cre"))
+Description: A mql5/mt5 integration from python to R through reticulate
+License: -
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+imports:
+    dplyr
+    glue
+    reticulate
