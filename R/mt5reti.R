@@ -5,6 +5,7 @@ library(dplyr)
 mt5<- reticulate::import('MetaTrader5',convert = FALSE)
 pd<- reticulate::import('pandas',convert = FALSE)
 
+#' function to initialize mql5
 initialize<- function(path='',...){
   dots<- list(...)
   if ('login' %in% names(dots)){
