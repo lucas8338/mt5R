@@ -1,15 +1,11 @@
 Package: mt5reti
-Type: Package
-Title: What the Package Does (One Line, Title Case)
+Title: a mt5/mql5 integration for R build through reticulate
 Version: 0.0.1
 Authors@R: 
-    person("Lucas", "Monteiro", , "lucas.ma8338@gmail.com", role = c("aut", "cre"))
-Description: A mql5/mt5 integration from python to R through reticulate
-License: -
+    person("Lucas", "Monteiro", , "lucas.ma8338@gmail.com", role= c('cre'))
+Description: What the package does (one paragraph).
+License: None
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
-imports:
-    dplyr
-    glue
-    reticulate
+Depends: dplyr, reticulate, glue
