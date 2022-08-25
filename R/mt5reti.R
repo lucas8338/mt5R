@@ -61,14 +61,14 @@ last_error<- function(){
 #' @export
 account_info<- function(){
   data<- mt5()$account_info()
-  pd()$DataFrame(data)%>%py_to_r()
+  data[['_asdict']]()%>%py_to_r()
 }
 #' @title terminal_info
 #' @return -
 #' @export
 terminal_info<- function(){
   data<- mt5()$terminal_info()
-  pd()$DataFrame(data)%>%py_to_r()
+  data[['_asdict']]()%>%py_to_r()
 }
 #' @title symbols_total
 #' @return -
@@ -82,7 +82,7 @@ symbols_total<- function(){
 #' @export
 symbols_get<- function(...){
   data<- mt5()$symbols_get(...)
-  pd()$DataFrame(data)%>%py_to_r()
+  data[['_asdict']]()%>%py_to_r()
 }
 #' @title symbol_info
 #' @param symbol character
@@ -90,7 +90,7 @@ symbols_get<- function(...){
 #' @export
 symbol_info<- function(symbol){
   data<- mt5()$symbol_info(symbol)
-  pd()$DataFrame(data)%>%py_to_r()
+  data[['_asdict']]()%>%py_to_r()
 }
 #' @title symbol_select
 #' @param symbol character
