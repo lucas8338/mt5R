@@ -24,7 +24,7 @@ initialize<- function(path='',...){
   if ('login' %in% names(dots)){
     dots$login<- as.integer(dots$login)
   }
-  do.call(mt5()$initialize,c(path,dots))%>%py_to_r()
+  do.call(mt5()$initialize,c(path,dots))%>%reticulate::py_to_r()
 }
 #' @title login
 #' @param ... elipsis
@@ -35,46 +35,46 @@ login<- function(...){
   if ('login' %in% names(dots)){
     dots$login<- as.integer(dots$login)
   }
-  do.call(mt5()$login,c(dots))%>%py_to_r()
+  do.call(mt5()$login,c(dots))%>%reticulate::py_to_r()
 }
 #' @title shutdown
 #' @param ... elipsis
 #' @return -
 #' @export
 shutdown<- function(...){
-  mt5()$shutdown()%>%py_to_r()
+  mt5()$shutdown()%>%reticulate::py_to_r()
 }
 #' @title version
 #' @return -
 #' @export
 version<- function(){
-  mt5()$version()%>%py_to_r()
+  mt5()$version()%>%reticulate::py_to_r()
 }
 #' @title last_error
 #' @return -
 #' @export
 last_error<- function(){
-  mt5()$last_error()%>%py_to_r()
+  mt5()$last_error()%>%reticulate::py_to_r()
 }
 #' @title account_info
 #' @return -
 #' @export
 account_info<- function(){
   data<- mt5()$account_info()
-  data[['_asdict']]()%>%py_to_r()
+  data[['_asdict']]()%>%reticulate::py_to_r()
 }
 #' @title terminal_info
 #' @return -
 #' @export
 terminal_info<- function(){
   data<- mt5()$terminal_info()
-  data[['_asdict']]()%>%py_to_r()
+  data[['_asdict']]()%>%reticulate::py_to_r()
 }
 #' @title symbols_total
 #' @return -
 #' @export
 symbols_total<- function(){
-  mt5()$symbols_total()%>%py_to_r()
+  mt5()$symbols_total()%>%reticulate::py_to_r()
 }
 #' @title symbols_get
 #' @param ... elipsis
@@ -82,7 +82,7 @@ symbols_total<- function(){
 #' @export
 symbols_get<- function(...){
   data<- mt5()$symbols_get(...)
-  data[['_asdict']]()%>%py_to_r()
+  data[['_asdict']]()%>%reticulate::py_to_r()
 }
 #' @title symbol_info
 #' @param symbol character
@@ -90,7 +90,7 @@ symbols_get<- function(...){
 #' @export
 symbol_info<- function(symbol){
   data<- mt5()$symbol_info(symbol)
-  data[['_asdict']]()%>%py_to_r()
+  data[['_asdict']]()%>%reticulate::py_to_r()
 }
 #' @title symbol_select
 #' @param symbol character
@@ -98,28 +98,28 @@ symbol_info<- function(symbol){
 #' @return -
 #' @export
 symbol_select<- function(symbol,enable){
-  mt5()$symbol_select(symbol,enable)%>%py_to_r()
+  mt5()$symbol_select(symbol,enable)%>%reticulate::py_to_r()
 }
 #' @title market_book_add
 #' @param symbol character
 #' @return -
 #' @export
 market_book_add<- function(symbol){
-  mt5()$market_book_add(symbol)%>%py_to_r()
+  mt5()$market_book_add(symbol)%>%reticulate::py_to_r()
 }
 #' @title market_book_get
 #' @param symbol character
 #' @return -
 #' @export
 market_book_get<- function(symbol){
-  mt5()$market_book_get(symbol)%>%py_to_r()
+  mt5()$market_book_get(symbol)%>%reticulate::py_to_r()
 }
 #' @title market_book_release
 #' @param symbol character
 #' @return -
 #' @export
 market_book_release<- function(symbol){
-  mt5()$market_book_release(symbol)%>%py_to_r()
+  mt5()$market_book_release(symbol)%>%reticulate::py_to_r()
 }
 #' @title copy_rates_from
 #' @param ... elipsis
