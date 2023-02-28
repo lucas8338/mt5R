@@ -1,6 +1,6 @@
 Package: mt5reti
 Title: a mt5/mql5 integration for R build through reticulate
-Version: 1.0.0.0
+Version: 1.0.0.1
 Authors@R: 
     person("Lucas", "Monteiro", , "lucas.ma8338@gmail.com", role= c('cre'))
 Description: mt5/mql5 integration using reticulate.
